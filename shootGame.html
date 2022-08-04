@@ -43,6 +43,16 @@
         disenharCircunferencia(x,y,radio, 'red');
 
     }
+
+    function sortearPosicion(maximo){
+        return Math.floor(Math.random() * maximo);
+    }
+
+    xAleatorio = sortearPosicion(600);
+    yAleatorio = sortearPosicion(400);
+    
+
+    disenharObjetivo(xAleatorio,yAleatorio);
     
 
 
