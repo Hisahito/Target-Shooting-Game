@@ -26,14 +26,9 @@
     function actualizarPantalla(){
 
         limpiarPantalla();
-        if(x > 600){
-            sentido = -20;
-        }else if(x < 0){
-            sentido = 20;
-        }
-
-        disenharCircunferencia(x,20,10);
-        x = x + sentido;
+        xAleatorio = sortearPosicion(600);
+        yAleatorio = sortearPosicion(400);
+        disenharObjetivo(xAleatorio,yAleatorio);
     }
 
     function disenharObjetivo(x,y){
@@ -48,14 +43,6 @@
         return Math.floor(Math.random() * maximo);
     }
 
-    xAleatorio = sortearPosicion(600);
-    yAleatorio = sortearPosicion(400);
-    
-
-    disenharObjetivo(xAleatorio,yAleatorio);
-    
-
-
-    //setInterval(actualizarPantalla,100);
+    setInterval(actualizarPantalla,1000);
 
 </script> 
